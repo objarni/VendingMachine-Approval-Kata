@@ -22,5 +22,7 @@ TEST_F(VendingMachineTest, InsertCoins) {
     ASSERT_EQ(1, machine->coin_count);
     ASSERT_EQ(5, machine->coins[0]);
 
-    ApprovalTests::Approvals::verify("hej");
+    char buffer[MAX_PRINT_LENGTH];
+    print_machine(machine, buffer);
+    ApprovalTests::Approvals::verify(string(buffer));
 }

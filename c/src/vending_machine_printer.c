@@ -5,27 +5,13 @@
 
 void
 print_machine(const struct vending_machine* machine, char* buffer) {
-    // TODO: print some useful values instead of these example keys and values
-    char line1[LINE_LENGTH];
-    char line2[LINE_LENGTH];
-    print_line(line1, "Key", "Value");
-    print_line(line2, "Other Key", "Another Value");
+    // TODO: print some useful values from the machine
 
-    sprintf(buffer, "VendingMachine\n"
-                    "%40s%s\n", "Key", "Value"
-    );
-}
+    buffer += sprintf(buffer, "VendingMachine\n");
+    buffer += sprintf(buffer, "%-20s%40s\n", "Display:", machine->display);
 
-void
-print_line(char *buffer, const char *key, const char *value) {
-    int whitespace_length = LINE_LENGTH - strlen(key) - strlen(value);
-    char whitespace[whitespace_length];
-    for (int i = 0; i < whitespace_length -1; ++i) {
-        whitespace[i] = ' ';
-    }
-    whitespace[whitespace_length-1] = '\0';
-
-    sprintf(buffer, "%s%s%s\n", key, whitespace, value );
+    // Note: there is a print_coins function below for when all the simple
+    // values are printed.
 }
 
 void
@@ -47,10 +33,3 @@ print_coins(char* buffer, const int* coins, int coins_length) {
 
     sprintf(buffer, "{%s}", array_contents );
 }
-
-int
-buffer_size_for_coins(int coins_length) {
-    // two for {} plus termination plus 4 chars per coin
-    return 3 + (coins_length * 4);
-}
-
