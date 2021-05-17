@@ -1,4 +1,5 @@
 #include <gtest/gtest.h>
+#include "ApprovalTests.hpp"
 
 using namespace std;
 
@@ -21,4 +22,5 @@ TEST_F(VendingMachineTest, InsertCoins) {
     ASSERT_EQ(1, machine->coin_count);
     ASSERT_EQ(5, machine->coins[0]);
 
+    ApprovalTests::Approvals::verify("hej");
 }

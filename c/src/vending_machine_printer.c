@@ -11,7 +11,9 @@ print_machine(const struct vending_machine* machine, char* buffer) {
     print_line(line1, "Key", "Value");
     print_line(line2, "Other Key", "Another Value");
 
-    sprintf(buffer, "%s\n%s%s", "VendingMachine", line1, line2);
+    sprintf(buffer, "VendingMachine\n"
+                    "%40s%s\n", "Key", "Value"
+    );
 }
 
 void
