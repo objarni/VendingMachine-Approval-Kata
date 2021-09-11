@@ -7,7 +7,7 @@ void
 print_machine(const struct vending_machine* machine, char* buffer) {
     // TODO: print some useful values from the machine
 
-    buffer += sprintf(buffer, "VendingMachine\n");
+    buffer += sprintf(buffer, "VendingMachine:\n");
     buffer += sprintf(buffer, "%-20s%40s\n", "Display:", machine->display);
 
     // Note: there is a print_coins function below for when all the simple
