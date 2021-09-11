@@ -21,7 +21,7 @@ void addState(char *buf, vending_machine *machine) {
     add(buf, machineState); add(buf, "\n");
 }
 
-void addInsertCoinAction(char* coin_name, vending_machine* machine, char* buf) {
+void addInsertCoinAction(char *buf, vending_machine *machine, char *coin_name) {
     // Action
     insert_coin(machine, coin_with_name(coin_name));
 
@@ -36,16 +36,14 @@ void addInsertCoinAction(char* coin_name, vending_machine* machine, char* buf) {
 
 
 TEST_F(VendingMachineTest, InsertCoins) {
-    // The text to approve in end
     char toVerify[MAX_PRINT_LENGTH];
 
-    // Print initial state of Vending Machine
     addState(toVerify, machine);
 
-    addInsertCoinAction("nickel", machine, toVerify);
-    addInsertCoinAction("dime", machine, toVerify);
-    addInsertCoinAction("quarter", machine, toVerify);
-    addInsertCoinAction("penny", machine, toVerify);
+    addInsertCoinAction(toVerify, machine, "nickel");
+    addInsertCoinAction(toVerify, machine, "dime");
+    addInsertCoinAction(toVerify, machine, "quarter");
+    addInsertCoinAction(toVerify, machine, "penny");
 
     ApprovalTests::Approvals::verify(string(toVerify));
 }
