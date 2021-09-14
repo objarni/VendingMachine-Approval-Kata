@@ -11,6 +11,8 @@ struct vending_machine {
     long balance;
     int coins[COIN_CAPACITY];
     int coin_count;
+    int returns[COIN_CAPACITY];
+    int return_count;
 };
 
 struct vending_machine* vending_machine_create();
