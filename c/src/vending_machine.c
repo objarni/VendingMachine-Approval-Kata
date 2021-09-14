@@ -24,8 +24,8 @@ void presentBalance(const long balance, char *price) {
 }
 
 void insert_coin(struct vending_machine* machine, int coin) {
+    machine->coins[machine->coin_count] = coin;
     machine->coin_count += 1;
-    machine->coins[0] = coin;
 
     machine->balance += coin;
 
