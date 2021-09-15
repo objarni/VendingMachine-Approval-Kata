@@ -11,7 +11,7 @@ void
 print_machine(const struct vending_machine* machine, char* buffer);
 
 void
-print_line(char *buffer, const char *key, const char *value);
+add(char* buffer, char* str);
 
 void
 print_coins(char* buffer, const int* coins, int coins_length);

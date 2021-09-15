@@ -11,10 +11,6 @@ extern "C"
 #include "VendingMachineTest.h"
 }
 
-void add(char* buffer, char* str) {
-    sprintf(buffer + strlen(buffer), str);
-}
-
 void addState(char *buf, vending_machine *machine) {
     char machineState[MAX_PRINT_LENGTH];
     print_machine(machine, machineState);
