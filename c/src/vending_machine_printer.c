@@ -20,7 +20,13 @@ void print_machine(const struct vending_machine* machine, char* buffer) {
 }
 
 void print_coins(char* buffer, const int* coins, int coins_length) {
+    strcpy(buffer, "");
     add(buffer, "{");
-    // TODO: implement
+    for(int i=0; i<coins_length; i++)
+    {
+        char coin[10];
+        sprintf(coin, "%d", coins[i]);
+        // TODO: finish implementation
+    }
     add(buffer, "}");
 }
