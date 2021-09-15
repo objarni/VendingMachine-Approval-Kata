@@ -10,13 +10,9 @@
 void
 print_machine(const struct vending_machine* machine, char* buffer);
 
-void
-print_line(char *buffer, const char *key, const char *value);
+void add(char* buffer, char* str);
 
 void
 print_coins(char* buffer, const int* coins, int coins_length);
-
-int
-buffer_size_for_coins(int coins_length);
 
 #endif //VENDINGMACHINE_VENDING_MACHINE_PRINTER_H
