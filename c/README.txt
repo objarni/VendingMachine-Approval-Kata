@@ -5,7 +5,7 @@ We'll play around with a central concept of
 Approval Testing: the printer.
 
 The printer is responsible for converting the
-object-structure-datatype we are interested
+object/structure/datatype that we are interested
 in testing into a text string.
 
 This is why it is called a printer: it "prints"

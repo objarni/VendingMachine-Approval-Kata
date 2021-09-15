@@ -43,21 +43,3 @@ TEST_F(VendingMachineTest, InsertCoins) {
 
     ApprovalTests::Approvals::verify(string(toVerify));
 }
-
-/* Target code equivalent
-    string toApprove = printer->print();
-
-    toApprove += insertCoin("nickel");
-    toApprove += printer->print();
-
-    toApprove += insertCoin("dime");
-    toApprove += printer->print();
-
-    toApprove += insertCoin("quarter");
-    toApprove += printer->print();
-
-    toApprove += insertCoin("penny");
-    toApprove += printer->print();
-
-    ApprovalTests::Approvals::verify(toApprove);
-*/
