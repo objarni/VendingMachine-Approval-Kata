@@ -15,7 +15,8 @@ print_machine(const struct vending_machine* machine, char* buffer) {
     buffer += sprintf(buffer, "%-20s%30s\n", "Returns", listBuffer);
 }
 
-void add(char* buffer, char* str) {
+void
+add(char* buffer, char* str) {
     sprintf(buffer + strlen(buffer), str);
 }
 
