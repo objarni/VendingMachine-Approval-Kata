@@ -14,7 +14,7 @@ the object onto "paper" (text).
 
 TODO
 ----
-1. vending_maching_gtest.cpp: make sure the
+1. vending_machine_gtest.cpp: make sure the
    test is running
 
 2. Find the *.approved.txt file, have a look at
