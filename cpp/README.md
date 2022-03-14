@@ -27,15 +27,16 @@ TODO
 4. Extend the test to include the following coin
    types:
 
-     dime
-     quarter
+   * dime
+   * quarter
+   * penny (note: this one isn't acccepted)
 
    That is, extend the approval string so that it
    is made clear what coin is inserted, and the
    state after each insert. How readable can you make
    it?
+   
+   You may have to change the printer as you go.
 
-   Note: there is a bug in insert_coin, which you
-   will have to fix on the way!
 
 5. End goal: No asserts, just a verify
